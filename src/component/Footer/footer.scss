@@ -1,0 +1,23 @@
+footer{
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    
+    
+    p{
+        font-size: .8rem;
+        color: #2E2E2E;
+        
+    }
+}
+
+@media (max-width: 736px) {
+    footer p {
+   display: none;
+    }
+}
+@media (max-height: 736px) {
+    footer p {
+   display: none;
+    }
+}

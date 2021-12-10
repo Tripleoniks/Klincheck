@@ -1,0 +1,52 @@
+@import "../scss/color";
+
+.form_area{
+    // margin: 1rem!important;
+    padding: 0 !important;
+    // background-color: crimson;
+    
+    .input_area{
+        border:none;
+        border-bottom: 2px solid #707070;
+        margin: 1rem 0;
+        padding: 5px 10px;
+        outline: none;
+        width: 100%;
+       
+    }
+    input::placeholder{
+        font-size: .8rem;
+   
+    }
+  
+}
+.no-select{
+    font-size: .7rem;
+    margin-top: -.2rem !important;
+    margin-left: -1rem;
+    
+}
+
+.veri_btn{
+    margin-top: 2rem !important;
+    background-color: $primary-color !important;
+    color: $secondary-color !important;
+    font-weight: 700 !important;
+    border-radius: 0 !important;
+    width: 100%;
+    
+    
+}
+.noveri_btn{
+    margin: 2rem 0 !important;
+    font-weight: 700 !important;
+    border-radius: 0 !important;
+    color: rgb(163, 162, 160) !important;  
+    width: 100% !important;
+
+}
+@media (max-height: 600px) {
+    .veri_btn, .noveri_btn{
+        margin-top: 1rem !important;
+    }
+}
