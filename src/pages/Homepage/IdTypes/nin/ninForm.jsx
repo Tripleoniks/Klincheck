@@ -77,7 +77,7 @@ const NinForm = () => {
        }
 /*------------------------- Input Field------------------------------------- */
     return (
-        <div id="form1">
+        <div id="form1" className="container-fluid"> 
              <form onSubmit={verify}>
                   <div className="container-fluid form_area">
                      <div className="row form_row">

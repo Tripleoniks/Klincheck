@@ -23,7 +23,7 @@ function App() {
               <Route exact path="/invalid" component={Invalid} />
               <Route exact path="*" component={ErrorPage} />
         </Switch>
-        
+        <Footer/>
         </div>
         </BrowserRouter>
  

@@ -1,6 +1,8 @@
 @import "../../scss/./color";
 
 footer{
+    position: absolute;
+    bottom: 1%;
     width: 100%;
     p{
         
@@ -12,5 +14,10 @@ footer{
     a{
         text-decoration: none;
         color: $primary-color;
+    }
+}
+@media (max-height: 740px) {
+    footer p{
+        display: none !important;
     }
 }

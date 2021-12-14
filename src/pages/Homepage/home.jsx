@@ -48,7 +48,7 @@ const Home = () => {
                     {formType === "NDL" && <NdlForm />}
                     {formType === "PVC" && <PvcForm />}
                     {formType === "NIP" && <NipForm />}
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
                 <div className="col-md-2 "></div>
                 <div className="col-md-5 " id="home_img">
