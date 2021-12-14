@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 import "../../../../scss/form.scss"
 import { toast } from 'react-toastify';
 
+
 /* Setting Parameter for request */
 const config = {
     headers: {
@@ -103,6 +104,7 @@ const NinForm = () => {
                 <div className="">{errMsg && <p style={{color: "crimson", fontSize: "12px", marginTop: "7px"}}>NIN must be 11 digits</p>}</div>
                 <VerifyButton className="text-center "/>
             </form>
+            
         </div>
     )
 }

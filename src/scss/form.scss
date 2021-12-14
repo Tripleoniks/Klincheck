@@ -1,8 +1,14 @@
 @import "../scss/color";
 
+
+
+#form1{
+    position: relative;
+}
 .form_area{
     // margin: 1rem!important;
     padding: 0 !important;
+    position: relative !important ;
     // background-color: crimson;
     
     .input_area{
