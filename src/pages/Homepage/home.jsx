@@ -14,7 +14,7 @@ import NipForm from "./IdTypes/nip/nip";
 const Home = () => {
     const [formType, setFormType ]= useState("NIN")
     return ( 
-        <><div className="container-fluid ">
+        <><div className="container-fluid">
             <div className="row ">
                 <div className="col-md-1"></div>
                 <div className="col-md-4  " id="main">
@@ -48,8 +48,8 @@ const Home = () => {
                     {formType === "NDL" && <NdlForm />}
                     {formType === "PVC" && <PvcForm />}
                     {formType === "NIP" && <NipForm />}
+                    <Footer />
                 </div>
-
                 <div className="col-md-2 "></div>
                 <div className="col-md-5 " id="home_img">
                    <div className="phone"></div>
@@ -58,7 +58,6 @@ const Home = () => {
             </div>
             
         </div>
-        <Footer />
         
         </>
      );

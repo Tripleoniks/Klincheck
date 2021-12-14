@@ -1,23 +1,17 @@
+@import "../../scss/./color";
+
 footer{
-    position: absolute;
-    bottom: 1%;
     width: 100%;
-    
-    
+    transform: translateY(7rem);
     p{
+        
         font-size: .8rem;
         color: #2E2E2E;
+        width: 100% !important;
         
     }
-}
-
-@media (max-width: 736px) {
-    footer p {
-   display: none;
-    }
-}
-@media (max-height: 736px) {
-    footer p {
-   display: none;
+    a{
+        text-decoration: none;
+        color: $primary-color;
     }
 }
