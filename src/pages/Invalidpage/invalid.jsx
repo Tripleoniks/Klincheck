@@ -1,7 +1,7 @@
 import "./invalid.scss";
 import Footer from "../../component/Footer/footer";
 import Logo from "../../component/Logo/logo";
-import ShareButtons from "../../component/shareButton/shareButton";
+
 
 
 const Invalid = () => {

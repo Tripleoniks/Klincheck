@@ -2,9 +2,9 @@
 
 
 
-#form1{
-    position: relative;
-}
+// #form1{
+//     position: relative;
+// }
 .form_area{ 
     padding: 0 !important;
     .input_area{
@@ -50,5 +50,6 @@
 @media (max-height: 600px) {
     .veri_btn, .noveri_btn{
         margin-top: 1rem !important;
+        
     }
 }

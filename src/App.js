@@ -1,14 +1,15 @@
 
 import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from './pages/Homepage/home';
+import IdVerification from './pages/IdVerification/idVerification';
 import Valid from './pages/Validpage/valid';
 import Invalid from './pages/Invalidpage/invalid';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { NotFound } from 'http-errors';
 import Footer from './component/Footer/footer';
 import ErrorPage from './pages/NotFound/Errorpage';
+import Homepage from './pages/HomePage/homePage';
+
 
 
 
@@ -18,7 +19,8 @@ function App() {
     <div className="App">
     <ToastContainer position="top-center" />
         <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/idVerification" component={IdVerification} />
               <Route exact path="/valid" component={Valid} />
               <Route exact path="/invalid" component={Invalid} />
               <Route exact path="*" component={ErrorPage} />

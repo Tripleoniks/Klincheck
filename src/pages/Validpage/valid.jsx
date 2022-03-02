@@ -3,11 +3,9 @@ import Footer from "../../component/Footer/footer";
 import Logo from "../../component/Logo/logo";
 import { useReactToPrint } from "react-to-print";
 import man from "../../images/man.png"
-import PvcForm from "../Homepage/IdTypes/pvc/pvcForm";
-import NinForm from "../Homepage/IdTypes/nin/ninForm";
-import shareButton from "../../component/shareButton/shareButton";
-import {InlineReactionButtons} from 'sharethis-reactjs';
-import {InlineShareButtons} from 'sharethis-reactjs';
+import PvcForm from "../IdVerification/IdTypes/pvc/pvcForm";
+import NinForm from "../IdVerification/IdTypes/nin/ninForm";
+
 
 
 const Valid = (props) => {

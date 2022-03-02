@@ -95,7 +95,7 @@ const NdlForm = () => {
                                 By checking this box and clicking "Verify Candidate", you acknowledge
                                 that you have gotten consent from the data subject to use their data
                                 for verification purposes on our platform in accordance with our &nbsp;
-                                <a href="https://klincheck.com/cookie.php" target="_blank">Privacy Policy</a></label>
+                                <a href="https://klincheck.com/cookie.php" target="blank" rel="noreferrer" >Privacy Policy</a></label>
                         </div>
 
             <div className="err">{errMsg && <p style={{color: "crimson", fontSize: "12px", marginTop: "7px"}}>NDL must be 11 digits</p>}</div>
