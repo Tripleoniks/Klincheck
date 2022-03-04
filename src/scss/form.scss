@@ -48,6 +48,29 @@
 
 }
 
+
+.form-group{
+   padding:5px 0 !important;
+   // border:2px solid;
+   box-shadow: 0px 3px 6px 3px #00000029;
+   margin:27px 0;
+   position: relative;
+   border-radius: 5px;
+ }
+ .form-group>label{
+   position:absolute;
+   top:-10px;
+   left:20px;
+   background-color:white;
+   color: #2E2E2E;
+   font-size: 12px;
+ }
+ 
+ .form-group>input{
+   border:none;
+   outline: none !important;                
+ }
+
 @media (max-height: 600px) {
     .veri_btn, .noveri_btn{
         margin-top: 1rem !important;

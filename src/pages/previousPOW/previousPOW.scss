@@ -1,0 +1,19 @@
+@import "../../scss/./color";
+#previous-home{
+    padding-left: 91px;
+    .previous-row{
+        align-items: center;
+        .left{
+            h3{
+                color: $primary-color;
+            }
+        }
+        .right{
+            background-image: url(../../images/previous.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import "../../scss/./color";
+
+select
+{
+   outline:0px !important;
+}
+#person-home{
+
+    padding-left: 91px;
+
+    .person-row{
+        align-items: center;
+        .left{
+            h3{
+                color: $primary-color;
+                margin-bottom: 2rem;
+            }
+            #person-select{
+                box-shadow: 0px 3px 6px 3px #00000029;
+                border: none;
+                padding: .5rem;
+                border-radius: 5px;
+                width: 152px;
+            }
+        }
+        .right{
+            background-image: url(../../images/person-veri.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+        }
+
+    }
+}
+
+
+

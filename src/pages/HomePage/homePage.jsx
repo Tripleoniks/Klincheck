@@ -23,7 +23,7 @@ const Homepage = () => {
                             <li> <Link to="/certificate"><i class="fa-solid fa-right-long"></i>  Verify Academic Certificate </Link></li>
                             <li> <Link to="/person"><i class="fa-solid fa-right-long"></i>  Verify a Person - <span id="Guarantor">Guarantor, Ref, etc</span></Link></li>
                             <li> <Link to="/criminal"><i class="fa-solid fa-right-long"></i>  Confirm a Person's Criminal Record  </Link></li>
-                            <li> <Link to="/workplace"><i class="fa-solid fa-right-long"></i>  Previous Place of Work <span className="free-text">Free</span> </Link></li>  
+                            <li> <Link to="/previous-workplace"><i class="fa-solid fa-right-long"></i>  Previous Place of Work <span className="free-text">Free</span> </Link></li>  
                         </ul>
                     </div>
                     <div className="col-md-7" id="home_img">
