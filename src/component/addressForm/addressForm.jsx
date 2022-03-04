@@ -33,7 +33,7 @@ const AddressForm = () => {
     return ( 
         
         <>
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit} method="post" >
         <div class="form-group">
          <label>Employee's Name</label>
          <input type="text" class="form-control" onChange={e => setName(e.target.value) } required/>
@@ -59,7 +59,7 @@ const AddressForm = () => {
          </div>
          <div class="form-group col-md-5">
          <label>Upload Passport Photograph</label>
-         <input type="file" class="form-control" onChange={e => setPassport(e.target.value)} required />
+         <input type="file" class="form-control" capture="user" accept="image/*" onChange={e => setPassport(e.target.value)} required />
          </div>
          </div>
          <CustomButton>Next</CustomButton>
