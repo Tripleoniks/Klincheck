@@ -5,10 +5,9 @@
 #main{
     height: 100vh !important;
     position: relative;
+    padding-left: 91px;
     // overflow: hidden !important;
-    .logo{
-        margin-left: -2rem !important;
-    }
+   
 h3{
     color: $primary-color;
     width: 400px;
@@ -38,16 +37,21 @@ p{
         margin-left: -7rem;
     }
 }
+.id-row{
+    justify-content: space-between;
+    align-items: center;
+
+}
 @media (max-width: 768px) {
     #main{
         width: 100% !important;
-     
+        padding-left: .5rem;
     }
     .section{
        justify-content: center !important;
     
     }
-    #home_img{
+    #id_img{
         display: none;
     }
     .form_radio{
@@ -55,12 +59,14 @@ p{
     }
 
 }
+
 @media (max-height: 600px) {
-    #home_img {
+    #id_img {
      display: none;
     }
     #main{
         width: 100% !important;
+        padding-left: 0 !important;
     }
    
   }

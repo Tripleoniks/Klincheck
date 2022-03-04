@@ -13,11 +13,10 @@ import NipForm from "./IdTypes/nip/nip";
 const Idverification = () => {
     const [formType, setFormType ]= useState("NIN")
     return ( 
-        <><div className="container-fluid">
-            <div className="row ">
-                <div className="col-md-1"></div>
-                <div className="col-md-4  " id="main">
-                     <Logo/>
+        <><div className="container-fluid" id="main">
+            <Logo/>
+            <div className="row id-row">
+                <div className="col-md-5 id-veri-content">
                     <h3>Knowing your <br /> customers has never been so <span>secured.</span></h3>
                     <p>To continue, enter candidate's details you want to verify</p>
                     <div className="col-md-12 form_radio">
@@ -48,8 +47,7 @@ const Idverification = () => {
                     {formType === "PVC" && <PvcForm />}
                     {formType === "NIP" && <NipForm />}
                 </div>
-                <div className="col-md-2 "></div>
-                <div className="col-md-5 " id="id_img">
+                <div className="col-md-5" id="id_img">
                    <div className="phone"></div>
                    
                 </div>

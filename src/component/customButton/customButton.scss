@@ -1,0 +1,11 @@
+@import "../../scss/default";
+@import "../../scss/./color";
+.custom-button{
+    width: 84px;
+    height: 42px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 5px;
+    border: none;
+
+}

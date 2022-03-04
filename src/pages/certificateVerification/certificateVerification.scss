@@ -1,0 +1,53 @@
+@import "../../scss/./color";
+#certi-home{
+        padding-left: 91px;
+    .certi-row{
+        align-items: center;
+        .left{
+
+            h3{
+                color: $primary-color;
+                font-weight: 600;
+            }
+            .input-box{
+                background-color: #F3F3F3;
+                max-width: 467px;
+                height: 181px;
+                margin-top: 51px;
+                position: relative;
+                border-radius: 5px;
+                cursor: pointer;
+                #certi-input{
+                width: 467px;
+                height: 181px;
+                opacity: 0;
+                z-index: 2;
+                cursor: pointer;
+                }
+                p{
+                    position: absolute;
+                    text-align: center;
+                    left: 50%;
+                    top: 30%;
+                     transform: translateX(-50%);
+                     width: fit-content;
+                    i{
+                        display: block;
+                        margin: .5rem 0;
+                        font-size: 2rem;
+                       
+                    }
+                }
+               
+            }
+        }
+        .right{
+            background-image: url(../../images/undraw_certificate_re_yadi.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+        }
+
+    }
+}

@@ -2,9 +2,9 @@
 @import "../../scss/./color";
 
 #home-main{
-   
+   padding-left: 91px;
     .head-text{
-        margin-top: 72px;
+        // margin-top: 51px;
         h3{
             color: $primary-color;
             font-weight: 600;
@@ -66,5 +66,26 @@
             background-repeat: no-repeat;
             height: inherit;
             margin-left: -7rem;
+        }
+    }
+
+    .home-row{
+        flex-direction: row;
+        align-items: center;
+    }
+ 
+    @media (max-width: 768px) {
+        #home-main{
+            padding-left: 1rem;
+        }
+        #home_img{
+            display: none;
+        }
+        .home-row{
+            margin-top: 5rem !important;
+            flex-direction: column-reverse;
+        }
+        li{
+            padding: 1.5rem 0 !important ;
         }
     }

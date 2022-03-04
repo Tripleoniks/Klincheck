@@ -1,0 +1,29 @@
+@import "../../scss/default";
+@import "../../scss/./color";
+#add-home{
+    padding-left: 91px;
+    padding: 0 auto;
+    .address-row{
+        align-items: center;
+        .left{
+            h3{
+                color: $primary-color;
+                font-weight: 600;
+            }
+              .add-row{
+                  justify-content: space-between;
+                  padding: 0!important;
+                  margin: 0 auto;
+
+              }
+        }
+        .right{
+            background-image: url(../../images/map.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    }
+  
+}

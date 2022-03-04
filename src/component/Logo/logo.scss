@@ -1,5 +1,11 @@
 #logo{
+    position: absolute;
     margin-top: 2rem;
-    margin-left: 0rem !important;
-    
+    margin-left: 0 !important;  
+}
+@media (max-width: 768px) {
+    #logo{
+        position: static;
+        width: fit-content;
+    }
 }

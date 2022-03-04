@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from './component/Footer/footer';
 import ErrorPage from './pages/NotFound/Errorpage';
 import Homepage from './pages/HomePage/homePage';
+import AddressVerification from './pages/addressVerification/addressVerification';
+import CertificateVerification from './pages/certificateVerification/certificateVerification';
 
 
 
@@ -21,6 +23,8 @@ function App() {
         <Switch>
               <Route exact path="/" component={Homepage} />
               <Route exact path="/idVerification" component={IdVerification} />
+              <Route exact path="/address" component={AddressVerification} />
+              <Route exact path="/certificate" component={CertificateVerification} />
               <Route exact path="/valid" component={Valid} />
               <Route exact path="/invalid" component={Invalid} />
               <Route exact path="*" component={ErrorPage} />
