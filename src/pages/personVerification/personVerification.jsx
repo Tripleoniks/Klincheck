@@ -2,11 +2,19 @@ import CustomButton from "../../component/customButton/customButton";
 import Logo from "../../component/Logo/logo";
 import "./personVerification.scss";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 
 
 const PersonVerification = () => {
-    const [personType, setPersonType ]= useState("guarantor")
+    const [personType, setPersonType ]= useState("guarantor");
+    const history = useHistory();
+
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        history.push("/choose-payment");
+    }
     return ( 
             <div className="container-fluid" id="person-home">
                 <Logo/>
@@ -14,7 +22,7 @@ const PersonVerification = () => {
                     <div className="left col-md-6">
                     <h3>Verify a person</h3>
 
-                    <form >
+                    <form onSubmit={handleSubmit}>
                     <select  id="person-select" required onChange={(e)=> setPersonType(e.target.value) }>
                     <option value="guarantor">Guarantor</option>
                     <option value="reference">Reference</option>

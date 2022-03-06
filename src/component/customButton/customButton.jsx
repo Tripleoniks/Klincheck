@@ -1,11 +1,11 @@
 
 import "./customButton.scss"
 
-const CustomButton = ({children, printReceipt}) => {
+const CustomButton = ({children, ...buttonProps}) => {
     return ( 
-        <button  className={`${ printReceipt ? 'inverted' : ''} custom-button `}>
-        {children}
-    </button>
+        <button className= "custom-button" {...buttonProps}>
+            {children}
+        </button>
      );
 }
  

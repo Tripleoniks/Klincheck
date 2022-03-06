@@ -1,11 +1,17 @@
 @import "../../scss/default";
 @import "../../scss/./color";
 .custom-button{
-    width: 84px;
+    min-width: 84px;
     height: 42px;
     background-color: $primary-color;
     color: $secondary-color;
     border-radius: 5px;
     border: none;
+    padding: .5rem;
 
+}
+@media (max-width: 768px) {
+    .custom-button{
+        width: 100%;
+    }
 }

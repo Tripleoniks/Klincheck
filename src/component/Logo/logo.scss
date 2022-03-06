@@ -9,3 +9,17 @@
         width: fit-content;
     }
 }
+
+@media (max-width: 768px){
+    #logo{
+        position: static;
+        width: fit-content;
+    }
+}
+@media (max-height: 670px) {
+        
+    #logo{
+        position: static;
+        width: fit-content;
+    }
+}

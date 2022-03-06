@@ -6,6 +6,7 @@
         .left{
             h3{
                 color: $primary-color;
+                font-weight: 600;
             }
         }
         .right{
@@ -15,5 +16,14 @@
             background-size: contain;
             height: 100vh;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    #previous-home{
+        padding: 1rem;
+    }   
+    .previous-row{
+        margin-top: 40% !important;
     }
 }

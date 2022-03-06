@@ -6,6 +6,7 @@
         .left{
             h3{
                 color: $primary-color;
+                font-weight: 600;
             }
         }
         .right{
@@ -16,4 +17,13 @@
             height: 100vh;
         }
     }
+}
+@media (max-width: 768px) {
+    #criminal-home{
+        padding: 1rem;
+    }
+    .criminal-row{
+    margin-top: 40% !important;
+    }
+
 }

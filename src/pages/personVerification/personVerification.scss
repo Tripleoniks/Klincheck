@@ -14,6 +14,7 @@ select
             h3{
                 color: $primary-color;
                 margin-bottom: 2rem;
+                font-weight: 600;
             }
             #person-select{
                 box-shadow: 0px 3px 6px 3px #00000029;
@@ -31,6 +32,17 @@ select
             height: 100vh;
         }
 
+    }
+}
+@media (max-width: 768px) {
+    #person-home{
+        padding: 1rem;
+    }
+    .person-row{
+        margin-top: 40% !important;
+    }
+    #person-select{
+        width: 100% !important;
     }
 }
 

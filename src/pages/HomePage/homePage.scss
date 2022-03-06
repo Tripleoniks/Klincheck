@@ -73,6 +73,11 @@
         flex-direction: row;
         align-items: center;
     }
+    @media (max-width: 1030px) {
+        .phone{
+            display: none;
+        }
+    }
  
     @media (max-width: 768px) {
         #home-main{

@@ -7,8 +7,10 @@ import Idverification from "../IdVerification/idVerification";
 
 const Homepage = () => {
     return ( 
-            <><div className="container-fluid" id="home-main">
-                <Logo/>
+        
+            <>
+            <div className="container-fluid" id="home-main">
+            <Logo/>
                 <div className="row home-row">
                     {/* <div className="col-md-1"></div> */}
                     <div className="col-md-5" >

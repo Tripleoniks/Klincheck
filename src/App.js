@@ -14,6 +14,8 @@ import CertificateVerification from './pages/certificateVerification/certificate
 import PersonVerification from './pages/personVerification/personVerification';
 import CriminalRecord from './pages/criminalRecord/criminalRecord';
 import PreviousPlace from './pages/previousPOW/previousPOW';
+import ChoosePayment from './pages/payment/choosePayment';
+
 
 
 
@@ -31,6 +33,7 @@ function App() {
               <Route exact path="/person" component={PersonVerification} />
               <Route exact path="/criminal" component={CriminalRecord} />
               <Route exact path="/previous-workplace" component={PreviousPlace} />
+              <Route exact path="/choose-payment" component={ChoosePayment} />
               <Route exact path="/valid" component={Valid} />
               <Route exact path="/invalid" component={Invalid} />
               <Route exact path="*" component={ErrorPage} />

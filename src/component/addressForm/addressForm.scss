@@ -1,8 +1,6 @@
-input:hover, 
-input:focus,
-input:active
-{
-   outline:0px !important;
-   -webkit-appearance:none;
-   box-shadow: none !important;
+
+.form-group input:active, .form-group  input:focus {
+  outline:0px !important;
+     -webkit-appearance:none;
+     box-shadow: none !important; 
 }

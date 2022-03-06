@@ -1,0 +1,106 @@
+#payment-home{
+    padding-left: 91px;
+    .payment-row{
+        align-items: center;
+        .left{
+            p{
+                font-size: 16px;
+                color: #7F7F7F;
+            }
+            h3{
+                color: #7F7F7F;
+                margin-bottom: 2rem;
+            }
+            .select-div{
+                margin-bottom: 2rem;
+            }
+            #transfer-select{
+                box-shadow: 0px 3px 6px 3px #00000029;
+                border: none;
+                padding: .5rem;
+                border-radius: 5px;
+                width: 152px;
+            }
+        }
+        #choose-payment-right{
+            background-image: url(../../images/online-payment.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh !important;
+        }
+        // #bank-transfer-right{
+
+        // }
+    }
+}
+#modal-box{
+    position: relative;
+    min-width: 80%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .close-modal{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        border: none;
+        background: none;
+        i{
+            font-size: 2rem;
+        }
+    }
+    .payment-input-box{
+        background-color: #F3F3F3;
+        width: 467px;
+        height: 181px;
+        margin-top: 51px;
+        position: relative;
+        border-radius: 5px;
+        cursor: pointer;
+        #payment-certi-input{
+        width: 467px;
+        height: 181px;
+        opacity: 0;
+        z-index: 2;
+        cursor: pointer;
+        }
+        p{
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 30%;
+             transform: translateX(-50%);
+             width: fit-content;
+            i{
+                display: block;
+                margin: .5rem 0;
+                font-size: 2rem;
+               
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    #payment-home{
+        padding: 1rem;
+    }
+    .payment-row{
+        margin-top: 50% !important;
+    }
+    #modal-box{
+        padding: 1rem !important;
+    }
+    .payment-input-box{
+        width: 200px !important;
+    }
+    #payment-certi-input{
+        width: 200px !important;
+    }
+
+#transfer-select{
+    width: 100% !important;
+}
+}
