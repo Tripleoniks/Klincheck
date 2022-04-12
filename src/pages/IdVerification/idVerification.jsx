@@ -21,24 +21,24 @@ const Idverification = () => {
                     <p>To continue, enter candidate's details you want to verify</p>
                     <div className="col-md-12 form_radio">
                         <div className="form-check form-check-inline">
-                        <input defaultChecked class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onChange={()=>setFormType("NIN")} />
-                        <label className="form-check-label" for="inlineRadio1">NIN</label>
+                        <input defaultChecked className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onChange={()=>setFormType("NIN")} />
+                        <label className="form-check-label" >NIN</label>
                         </div>
                         <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" onChange={() => setFormType("BVN")}/>
-                        <label className="form-check-label" for="inlineRadio2">BVN</label>
+                        <label className="form-check-label" >BVN</label>
                         </div>
                         <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" onChange={() => setFormType("NDL")}/>
-                        <label className="form-check-label" for="inlineRadio3">NDL</label>
+                        <label className="form-check-label" >NDL</label>
                         </div>
                         <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" onChange={() => setFormType("PVC")}/>
-                        <label className="form-check-label" for="inlineRadio4">PVC</label>
+                        <label className="form-check-label" >PVC</label>
                         </div>
                         <div className="form-check form-check-inline">
                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5" onChange={() => setFormType("NIP")}/>
-                        <label className="form-check-label" for="inlineRadio5">NIP</label>
+                        <label className="form-check-label" >NIP</label>
                         </div>
                     </div> 
                     {formType === "NIN" && <NinForm />}

@@ -1,10 +1,8 @@
 import "./valid.scss";
 import Footer from "../../component/Footer/footer";
 import Logo from "../../component/Logo/logo";
-import { useReactToPrint } from "react-to-print";
 import man from "../../images/man.png"
-import PvcForm from "../IdVerification/IdTypes/pvc/pvcForm";
-import NinForm from "../IdVerification/IdTypes/nin/ninForm";
+
 
 
 

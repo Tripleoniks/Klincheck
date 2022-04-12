@@ -94,7 +94,7 @@ const NinForm = () => {
                          </div>
                          <div className="row">
                          <input id="consent-check" className="col-md-1 col-1" type="checkbox" value="check" checked={isChecked} onChange={handleOnChange}></input>
-                         <label for="consent-check" className=" col-md-11 col-11 no-select">
+                         <label  className=" col-md-11 col-11 no-select">
                                 By checking this box and clicking "Verify Candidate", you acknowledge
                                 that you have gotten consent from the data subject to use their data
                                 for verification purposes on our platform in accordance with our &nbsp;

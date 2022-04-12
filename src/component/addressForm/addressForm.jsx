@@ -1,7 +1,12 @@
+import axios from "axios";
 import { useState } from "react";
-import { example } from "../../services/postAddressData";
 import CustomButton from "../customButton/customButton";
 import "./addressForm.scss"
+import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
+import ButtonLoader from "../buttonLoader/buttonLoader";
+import { handleSumbitForm } from "../../useFetch";
+
 
 const AddressForm = () => {
     const [name, setName] = useState("");
@@ -11,29 +16,33 @@ const AddressForm = () => {
     const [landmark, setLandmark] = useState("");
     const [passport, setPassport] = useState("")
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
+   
  
    
-    const data = {
-        "employees_Name": name,
-        "employess_address" : address,
+    const userData = {
+        "employee_name": name,
+        "employee_address" : address,
         "city": city,
         "state": state,
-        "landmark": landmark,
-        "passport": passport
+        "bus_stop": landmark,
+        "image_path": passport
     }
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault()
-        if (name && address && city && state && landmark && passport) {
-             example(data);
-        }
+        const response = handleSumbitForm(
+            "http://aledoyhost.com/klinsheet_api/api_criminal_record/items/create.php",
+            userData
+          );
+          console.log(response);
     }
     
 
     return ( 
         
         <>
-        <form onSubmit={handleSubmit} method="post" >
+        <form onSubmit={handleSubmit} >
         <div class="form-group">
          <label>Employee's Name</label>
          <input type="text" class="form-control" onChange={e => setName(e.target.value) } required/>
@@ -62,7 +71,7 @@ const AddressForm = () => {
          <input type="file" class="form-control" capture="user" accept="image/*" onChange={e => setPassport(e.target.value)} required />
          </div>
          </div>
-         <CustomButton>Next</CustomButton>
+         <CustomButton>{ loading ? "Please Wait" : "Next"}{loading && <ButtonLoader/>}</CustomButton>
          
         </form></>
  
