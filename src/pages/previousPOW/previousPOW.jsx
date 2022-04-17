@@ -2,13 +2,14 @@ import Logo from "../../component/Logo/logo";
 import "./previousPOW.scss";
 import CustomButton from "../../component/customButton/customButton";
 import { useState } from "react";
-import axios from "axios";
-import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
 import ButtonLoader from "../../component/buttonLoader/buttonLoader";
-import { handleSumbitForm } from "../../useFetch";
+import { handleSumbitForm } from "../../services/usePost";
+import { toast } from "react-toastify";
+
 
 const PreviousPlace = () => {
+  const [email, setEmail] = useState("");
   const [staffName, setStaffName] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [companyAddress, setCompanyAddress] = useState("");
@@ -17,16 +18,20 @@ const PreviousPlace = () => {
   const history = useHistory();
 
   const userData = {
-    staff_name: staffName,
-    company_name: companyName,
-    company_address: companyAddress,
-    position: position,
+    "customer_id": email,
+    "staff_name": staffName,
+    "company_name": companyName,
+    "company_address": companyAddress,
+    "position": position,
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await handleSumbitForm("http://aledoyhost.com/klinsheet_api/api_previous_employer/items/create.php", userData)
-    console.log(response);
+    setLoading(true);
+    await handleSumbitForm("http://aledoyhost.com/klinsheet_api/api_previous_employer/items/create.php", userData)
+    setLoading(false);
+    toast.success("Successfully Submitted");
+    history.push("/");
   };
 
   return (
@@ -36,6 +41,10 @@ const PreviousPlace = () => {
         <div className="left col-md-6">
           <h3>Previous place of work</h3>
           <form onSubmit={handleSubmit}>
+          <div class="form-group">
+         <label>Your Email</label>
+         <input type="text" class="form-control" onChange={e => setEmail(e.target.value) } required/>
+         </div>
             <div className="form-group">
               <label>Staff Name</label>
               <input

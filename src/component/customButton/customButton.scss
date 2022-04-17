@@ -1,13 +1,20 @@
 @import "../../scss/default";
 @import "../../scss/./color";
 .custom-button{
+    margin: 1rem 0;
     min-width: 84px;
     height: 42px;
     background-color: $primary-color;
     color: $secondary-color;
     border-radius: 5px;
-    border: none;
+    border: 1px solid transparent;
     padding: .5rem;
+    &:hover{
+        background-color: $secondary-color;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        transition: ease-in-out .6s;
+    }
 
 }
 @media (max-width: 768px) {

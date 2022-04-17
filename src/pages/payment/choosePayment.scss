@@ -1,3 +1,4 @@
+@import "../../scss/./color";
 #payment-home{
     padding-left: 91px;
     .payment-row{
@@ -35,9 +36,10 @@
     }
 }
 #modal-box{
+   border: 1px solid $primary-color !important;
     position: relative;
-    min-width: 80%;
-    height: 70%;
+    width: fit-content;
+    height: fit-content;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -52,36 +54,19 @@
             font-size: 2rem;
         }
     }
-    .payment-input-box{
-        background-color: #F3F3F3;
-        width: 467px;
-        height: 181px;
-        margin-top: 51px;
-        position: relative;
-        border-radius: 5px;
-        cursor: pointer;
+    .modal-form{
+        min-width: 450px;
+        margin-top: 3rem;
+        label{
+            margin: 1rem 0;
+        }
         #payment-certi-input{
-        width: 467px;
-        height: 181px;
-        opacity: 0;
-        z-index: 2;
-        cursor: pointer;
-        }
-        p{
-            position: absolute;
-            text-align: center;
-            left: 50%;
-            top: 30%;
-             transform: translateX(-50%);
-             width: fit-content;
-            i{
-                display: block;
-                margin: .5rem 0;
-                font-size: 2rem;
-               
-            }
-        }
+            width: 100% !important;
+            outline: none !important; 
+            box-shadow: none !important;
     }
+    }
+ 
 }
 @media (max-width: 768px) {
     #payment-home{
