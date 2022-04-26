@@ -1,25 +1,13 @@
 #logo{
     position: absolute;
-    margin-top: 2rem;
-    margin-left: 0 !important;  
-}
-@media (max-width: 768px) {
-    #logo{
-        position: static;
-        width: fit-content;
-    }
+    margin: 2rem 0 ;
+    
 }
 
 @media (max-width: 768px){
     #logo{
         position: static;
         width: fit-content;
-    }
-}
-@media (max-height: 670px) {
-        
-    #logo{
-        position: static;
-        width: fit-content;
+        padding: 1rem 0 0 1rem;
     }
 }

@@ -38,12 +38,15 @@
 #modal-box{
    border: 1px solid $primary-color !important;
     position: relative;
-    width: fit-content;
+    width: 40%;
     height: fit-content;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    form{
+        width: 100%;
+    }
     .close-modal{
         position: absolute;
         right: 1rem;
@@ -55,13 +58,11 @@
         }
     }
     .modal-form{
-        min-width: 450px;
         margin-top: 3rem;
         label{
             margin: 1rem 0;
         }
         #payment-certi-input{
-            width: 100% !important;
             outline: none !important; 
             box-shadow: none !important;
     }
@@ -76,14 +77,14 @@
         margin-top: 50% !important;
     }
     #modal-box{
-        padding: 1rem !important;
+        width: 80% !important;
     }
-    .payment-input-box{
-        width: 200px !important;
-    }
-    #payment-certi-input{
-        width: 200px !important;
-    }
+    // #payment-certi-input{
+    //     width: 100% !important;
+    // }
+    // .modal-form{
+    //     width: 225px !important;
+    // }
 
 #transfer-select{
     width: 100% !important;

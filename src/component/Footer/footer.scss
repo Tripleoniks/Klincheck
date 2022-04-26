@@ -16,8 +16,10 @@ footer{
         color: $primary-color;
     }
 }
-@media (max-height: 740px) {
+@media (max-height: 900px) {
     footer p{
-        display: none !important;
+    display: none !important;
+       padding-top: 2rem !important;
+       background-color: aqua;
     }
 }

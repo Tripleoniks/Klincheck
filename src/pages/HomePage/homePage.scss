@@ -3,6 +3,7 @@
 
 #home-main{
    padding-left: 91px;
+//    margin: 1.5rem 0;
     .head-text{
         // margin-top: 51px;
         h3{
@@ -70,7 +71,6 @@
     }
 
     .home-row{
-        flex-direction: row;
         align-items: center;
     }
     @media (max-width: 1030px) {
@@ -81,16 +81,16 @@
  
     @media (max-width: 768px) {
         #home-main{
-            padding-left: 1rem;
+            padding: 1rem;
+            height: 100vh;
         }
         #home_img{
             display: none;
         }
-        .home-row{
-            margin-top: 5rem !important;
-            flex-direction: column-reverse;
-        }
         li{
             padding: 1.5rem 0 !important ;
+        }
+        .home-row{
+            height: 100%;
         }
     }

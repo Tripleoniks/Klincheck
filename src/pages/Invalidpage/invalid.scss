@@ -1,22 +1,27 @@
-.bxx{
-    background-image: url(../../images/invalid_img..png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.invalid-image {
+//   background-image: url(../../images/invalid_img..png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 
+.inv, .deet {
+  color: crimson !important;
 }
-.share_{
-   margin-top: 250px;
-   cursor:pointer;
+.invalid {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.backimg{
-    background-image: url(../../images/invalid_bckimg.png);
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-size: contain;
-    margin-left: -3rem;
-}
-.inv{
-    color: crimson !important;
+
+
+@media screen and (max-width: 768px) {
+ .backimg{
+     display: none;
+ }
+ .crd{
+        height: fit-content !important;
+
+ }
 }

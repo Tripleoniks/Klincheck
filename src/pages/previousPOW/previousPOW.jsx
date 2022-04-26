@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import ButtonLoader from "../../component/buttonLoader/buttonLoader";
 import { handleSumbitForm } from "../../services/usePost";
-import { toast } from "react-toastify";
 
 
 const PreviousPlace = () => {
@@ -30,7 +29,6 @@ const PreviousPlace = () => {
     setLoading(true);
     await handleSumbitForm("http://aledoyhost.com/klinsheet_api/api_previous_employer/items/create.php", userData)
     setLoading(false);
-    toast.success("Successfully Submitted");
     history.push("/");
   };
 
@@ -41,9 +39,9 @@ const PreviousPlace = () => {
         <div className="left col-md-6">
           <h3>Previous place of work</h3>
           <form onSubmit={handleSubmit}>
-          <div class="form-group">
+          <div className="form-group">
          <label>Your Email</label>
-         <input type="text" class="form-control" onChange={e => setEmail(e.target.value) } required/>
+         <input type="text" className="form-control" onChange={e => setEmail(e.target.value) } required/>
          </div>
             <div className="form-group">
               <label>Staff Name</label>

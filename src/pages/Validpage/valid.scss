@@ -1,122 +1,109 @@
 @import "../../scss/default";
 @import "../../scss/./color";
-#logo{
-    margin-left: 2rem;
-}
-.con{
-    position: relative;
-}
-.valid{
-    max-width: 949px;
-    min-height: 400px;
-    border: 1px solid transparent;
-    box-shadow: 0 8px 8px -8px ;
-    margin-top: 100px !important;
-    padding: 1rem;
-    .card-box{
-        width: 280px;
-        height: 302px;
-        border: 1px solid;
-        box-shadow: 10px 10px #888888;
-        border-radius: 0 !important;
-        .card-body{
-            width: 320px;
-            height: 320px;
-            
 
-        }
-    }
-    .details{
-        margin-left: 4rem;
-
-
-        h6{
-            color: $primary-color;
-            font-weight: 700
-        }
-        .deet{
-            margin-top: 2rem;
-        }
-        span{
-            color: #D4D4D4;
-            font-size: .6rem;
-            font-weight: 700;
-        }
-    }
-    i{
-        color: $primary-color;
-        font-size: 2rem;
-        align-items: center;
-    }
-    label{
-        margin-left: .5rem;
-    }
-    
+.con {
+  position: relative;
 }
-.bckimg{
-    background-image: url(../../images/bckimg.png);
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-size: contain;
-    margin-left: -3rem;
+.valid-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
-@media (min-device-width : 735px) and
-(max-width: 768px) {
-    .card-box{
-        width: 200px !important;
-        height: 200px !important;
-        .card-body{
-         width: 250px !important;
-         
+.valid {
+  width: 949px;
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 6px 3px #00000029;
+  padding: 1rem;
+  align-items: center;
+  .card-box {
+    width: 280px;
+    height: 302px;
+    border: 1px solid;
+    box-shadow: 10px 10px #888888;
+    border-radius: 0 !important;
+    .card-body {
+      width: 320px;
+      height: 320px;
     }
+  }
+  .details {
+    margin-left: 4rem;
+
+    h6 {
+      color: $primary-color;
+      font-weight: 700;
     }
+    .deet {
+      margin-top: 2rem;
+    }
+    span {
+      color: #d4d4d4;
+      font-size: 0.6rem;
+      font-weight: 700;
+    }
+  }
+  i {
+    color: $primary-color;
+    font-size: 2rem;
+    align-items: center;
+  }
+  label {
+    margin-left: 0.5rem;
+  }
+}
+.bckimg {
+  background-image: url(../../images/bckimg.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: contain;
+  margin-left: -3rem;
+}
+@media (min-device-width: 735px) and (max-width: 768px) {
+  .card-box {
+    width: 200px !important;
+    height: 200px !important;
+    .card-body {
+      width: 250px !important;
+    }
+  }
 }
 @media (max-width: 736px) {
-    #logo{
-        margin: .5rem 0 0 !important;
-    }
-    .valid{
-        margin: 1.5rem auto !important;
-        box-shadow: none!important;
-        border: none;
-        padding: 0;
-    .card-box{
-        border: none !important;
-        box-shadow: none !important;
-        .card-body{
-            width: 300px !important;
-            margin: 0 auto !important;
-            img{
-                margin-left: 1rem !important;
-            }
+  #logo {
+    margin: 0.5rem 0 0 !important;
+  }
+  .valid {
+    margin: 1.5rem auto !important;
+    box-shadow: none !important;
+    border: none;
+    padding: 0;
+    .card-box {
+      border: none !important;
+      box-shadow: none !important;
+      .card-body {
+        width: 300px !important;
+        margin: 0 auto !important;
+        img {
+          margin-left: 1rem !important;
         }
+      }
     }
-    .details{
-        position: relative;
-         margin-left: 0 !important;
-         background-color: #F6F6F6;
-         margin-top: 4rem !important;
-         margin-bottom: 3rem !important;
-         padding: .5rem;
-
-         .deet{
-             margin-top: .5rem;
-         }
-         .share{
-             text-align: center !important;
-             border: 1px solid transparent;
-             color: $secondary-color;
-             background-color: $primary-color;
-             border-radius: 20px;
-             padding: .5rem;
-             label{
-                 font-weight: 700;
-             }
-         }
+    .details {
+      background-color: #f6f6f6;
+    margin: 2rem auto !important;
+      padding: 0.5rem;
+      .deet {
+        margin-top: 0.5rem;
+      }
     }
-    i{
-    display: none;
+    i {
+      display: none;
     }
-}
-
+  }
+  .sharethis-inline-share-buttons{
+    //   width: fit-content !important;
+    //   background-color: black;
+      text-align: start !important;
+  }
 }

@@ -64,6 +64,10 @@ const ChoosePayment = (props) => {
     getAccountDetails();
   }, []);
 
+
+
+
+
   return (
     <div className="container-fluid" id="payment-home">
       <Logo />
