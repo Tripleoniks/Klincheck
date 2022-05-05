@@ -1,0 +1,3 @@
+[submodule "Klincheck"]
+	path = Klincheck
+	url = https:/github.com/aledoysolutions/Klincheck.git
