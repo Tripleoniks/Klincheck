@@ -7,7 +7,6 @@ import ButtonLoader from "../../component/buttonLoader/buttonLoader";
 import { handleSumbitForm } from "../../services/usePost";
 import axios from "axios";
 
-
 const CertificateVerification = () => {
   const [email, setEmail] = useState("");
   const [certificate, setCertificate] = useState("");
@@ -15,8 +14,8 @@ const CertificateVerification = () => {
   const [loading, setLoading] = useState(false);
   const [price, setPrice] = useState("");
   const userData = {
-    "customer_id": email,
-    "image_path": certificate,
+    customer_id: email,
+    image_path: certificate,
   };
   const getPrice = async () => {
     const price = await axios.get(
@@ -24,7 +23,7 @@ const CertificateVerification = () => {
     );
     setPrice(price?.data?.items[0]);
   };
- const {academic_price} = price;
+  const { academic_price } = price;
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
@@ -45,59 +44,65 @@ const CertificateVerification = () => {
     datay.append("upload_preset", "rem1xpra");
     datay.append("cloud_name", "klinsheet");
     setLoading(true);
-    try{
+    try {
       const res = await axios.post(
         "https://api.cloudinary.com/v1_1/klinsheet/image/upload",
         datay
       );
       console.log(res);
       userData.image_path = res.data.secure_url;
-      try{
+      try {
         const response = await handleSumbitForm(
           "http://aledoyhost.com/klinsheet_api/api_academic_veri/items/create.php",
           userData
         );
         setLoading(false);
-        history.push("/choose-payment", {email: userData.customer_id, amount:academic_price ,requestType: "Academic Verification"});
-    } 
-    catch(err){
-      console.log(err);
+        history.push("/choose-payment", {
+          email: userData.customer_id,
+          amount: academic_price,
+          requestType: "Academic Verification",
+        });
+      } catch (err) {
+        console.log(err);
+        setLoading(false);
+        history.push("/");
+      }
+    } catch (error) {
+      console.log(error);
       setLoading(false);
-      history.push("/");
     }
-  }
-  catch (error) {
-    console.log(error);
-    setLoading(false);
-  }
-}
+  };
 
-
- useEffect(() => {
-  getPrice();
-}, []);
+  useEffect(() => {
+    getPrice();
+  }, []);
 
   return (
     <div className="container-fluid" id="certi-home">
       <Logo />
       <div className="row certi-row">
         <div className="left col-md-6">
-        <div className="back-btn">
-          <button onClick={() => history.goBack()}>
-            {/* <i className="fa-solid fa-arrow-left-long"></i> */}
-            back
-          </button>
+          <div className="back-btn">
+            <button onClick={() => history.goBack()}>
+              {/* <i className="fa-solid fa-arrow-left-long"></i> */}
+              back
+            </button>
           </div>
           <h3>Verify academic certificate</h3>
           <form onSubmit={handleSubmit}>
-          <div className="form-group">
-         <label>Your Email</label>
-         <input type="text" className="form-control" onChange={e => setEmail(e.target.value) } required/>
-         </div>
+            <div className="form-group">
+              <label>Your Email</label>
+              <input
+                type="text"
+                className="form-control"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
             <div className="input-box">
               <p>
-                <i className="fa-solid fa-upload"></i>Upload copy of the certificate
-                you want verify
+                <i className="fa-solid fa-upload"></i>Upload copy of the
+                certificate you want verify
               </p>
               <input
                 id="certi-input"
@@ -110,7 +115,10 @@ const CertificateVerification = () => {
               />
             </div>{" "}
             <br /> <br />
-            <CustomButton>{ loading ? "Please Wait" : "Next"}{loading && <ButtonLoader/>}</CustomButton>
+            <CustomButton>
+              {loading ? "Please Wait" : "Next"}
+              {loading && <ButtonLoader />}
+            </CustomButton>
           </form>
         </div>
         <div className="right col-md-6"></div>
