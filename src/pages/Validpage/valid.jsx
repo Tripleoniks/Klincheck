@@ -31,11 +31,10 @@ const Valid = (props) => {
           <div className="col-md-4 col-12 details">
             <h6>Candidate's Data Verified</h6>
             <div className="deet">
-                {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo voluptatibus distinctio, hic maxime accusamus vero aliquid voluptate a nostrum unde?</p> */}
-              <p>  <span> Candidate's Lastname:</span> <br /> Akinsanya </p>
-                            <p>  <span> Candidate's Fastname:</span> <br />Michael</p>
-                            <p>  <span> Candidate's Date Of Birth:</span> <br /> 22-02-1996 </p>
-                            <p>  <span> Identification Number:</span> <br /> 123456789 </p>
+              <p>  <span> Candidate's Lastname:</span> <br /> {lastName} </p>
+                            <p>  <span> Candidate's Firsttname:</span> <br /> {firstName} </p>
+                            <p>  <span> Candidate's Date Of Birth:</span> <br /> {dateOfBirth} </p>
+                            <p>  <span> Identification Number:</span> <br /> {id} </p>
             </div>
             <InlineShareButtons
               config={{
