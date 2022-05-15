@@ -18,3 +18,15 @@ label:focus,
 .App {
   overflow: hidden;
 }
+
+.back-btn button {
+  background: none;
+  border: none;
+  color: #1C6641;
+  cursor: pointer;
+  margin: 3rem 0 1rem 0;
+}
+
+.back-btn  button:hover {
+  color: #1b8652;
+}

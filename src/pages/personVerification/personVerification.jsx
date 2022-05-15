@@ -43,7 +43,6 @@ const PersonVerification = () => {
       "http://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/create.php",
       userData
     );
-    console.log(response);
     setLoading(false);
     e.target.reset();
     history.push("/choose-payment", {email: userData.customer_id, amount:guarantor_price ,requestType: personType});
@@ -60,6 +59,12 @@ const PersonVerification = () => {
       <Logo />
       <div className="row person-row">
         <div className="left col-md-6">
+        <div className="back-btn">
+          <button onClick={() => history.goBack()}>
+            {/* <i className="fa-solid fa-arrow-left-long"></i> */}
+            back
+          </button>
+          </div>
           <h3>Verify a person</h3>
           <form onSubmit={handleSubmit}>
             <select

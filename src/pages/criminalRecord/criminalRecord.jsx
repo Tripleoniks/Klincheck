@@ -57,7 +57,14 @@ const CriminalRecord = () => {
     <div className="container-fluid" id="criminal-home">
       <Logo />
       <div className="row criminal-row">
+        
         <div className="left col-md-6">
+        <div className="back-btn">
+          <button onClick={() => history.goBack()}>
+            {/* <i className="fa-solid fa-arrow-left-long"></i> */}
+            back
+          </button>
+          </div>
           <h3>
             Confirm a person's <br /> criminal check
           </h3>

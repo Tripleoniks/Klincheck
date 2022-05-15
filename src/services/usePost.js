@@ -10,7 +10,6 @@ export const handleSumbitForm = async ( url, userData) => {
         url,
         userData, 
       );
-      console.log(data);
       if (data.status === 201) {
         toast.success("Request Successful");
       }

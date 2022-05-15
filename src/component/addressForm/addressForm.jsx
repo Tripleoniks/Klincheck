@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import CustomButton from "../customButton/customButton";
 import "./addressForm.scss";
 import { useHistory } from "react-router-dom";
@@ -25,17 +26,49 @@ const AddressForm = () => {
     bus_stop: landmark,
     image_path: passport,
   };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //     const response = await handleSumbitForm(
+  //       "http://aledoyhost.com/klinsheet_api/api_address_veri/items/create.php",
+  //       userData
+  //     );
+  //     console.log(response);
+  //     setLoading(false);
+  //     history.push("/");
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const datax = new FormData();
+    datax.append("file", passport);
+    datax.append("upload_preset", "rem1xpra");
+    datax.append("cloud_name", "klinsheet");
     setLoading(true);
-      const response = await handleSumbitForm(
-        "http://aledoyhost.com/klinsheet_api/api_address_veri/items/create.php",
-        userData
+    try{
+      const response = await axios.post(
+        "https://api.cloudinary.com/v1_1/klinsheet/image/upload",
+        datax
       );
-      console.log(response);
-      setLoading(false);
+      userData.image_path = response?.data?.secure_url;
+      try{
+        const res = await handleSumbitForm(
+          "http://aledoyhost.com/klinsheet_api/api_address_veri/items/create.php",
+          userData
+        );
+        setLoading(false);
+        history.push("/");
+      }
+    catch(err){
+      console.log(err);
       history.push("/");
-  };
+      setLoading(false);
+    }
+    } catch(error){
+      console.log(error);
+    }
+    setLoading(false);
+  }
 
   return (
     <>
@@ -104,7 +137,7 @@ const AddressForm = () => {
               className="form-control"
               capture="user"
               accept="image/*"
-              onChange={(e) => setPassport(e.target.value)}
+              onChange={(e) => setPassport(e.target.files[0])}
               required
             />
           </div>

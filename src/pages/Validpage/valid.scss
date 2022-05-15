@@ -4,6 +4,9 @@
 .con {
   position: relative;
 }
+.valid-logo{
+  margin-left: 91px;
+}
 .valid-container {
   display: flex;
   justify-content: center;
@@ -12,31 +15,29 @@
   height: 100vh;
 }
 .valid {
-  width: 949px;
+  width: 70%;
   border: 1px solid transparent;
   box-shadow: 0px 3px 6px 3px #00000029;
-  padding: 1rem;
+  padding: 3rem 1rem;
   align-items: center;
+  justify-content: space-between;
   .card-box {
-    width: 280px;
-    height: 302px;
+    max-width: 100%;
     border: 1px solid;
     box-shadow: 10px 10px #888888;
     border-radius: 0 !important;
     .card-body {
-      width: 320px;
-      height: 320px;
+      width: 100%;    
     }
   }
   .details {
-    margin-left: 4rem;
-
     h6 {
       color: $primary-color;
       font-weight: 700;
     }
     .deet {
       margin-top: 2rem;
+      color: $primary-color;
     }
     span {
       color: #d4d4d4;
@@ -58,7 +59,9 @@
   background-repeat: no-repeat;
   background-position-y: center;
   background-size: contain;
-  margin-left: -3rem;
+  // margin-left: -3rem;
+  width: 100%;
+  height: 100%;
 }
 @media (min-device-width: 735px) and (max-width: 768px) {
   .card-box {
@@ -73,37 +76,28 @@
   #logo {
     margin: 0.5rem 0 0 !important;
   }
+  .valid-logo{
+    margin-left: 0 !important;
+  }
   .valid {
-    margin: 1.5rem auto !important;
-    box-shadow: none !important;
-    border: none;
+   width: 90%;
     padding: 0;
     .card-box {
       border: none !important;
       box-shadow: none !important;
-      .card-body {
-        width: 300px !important;
-        margin: 0 auto !important;
-        img {
-          margin-left: 1rem !important;
-        }
-      }
     }
     .details {
       background-color: #f6f6f6;
-    margin: 2rem auto !important;
       padding: 0.5rem;
       .deet {
-        margin-top: 0.5rem;
+        margin-top: 0.5rem;        
       }
     }
     i {
       display: none;
     }
   }
-  .sharethis-inline-share-buttons{
-    //   width: fit-content !important;
-    //   background-color: black;
-      text-align: start !important;
+ .bckimg {
+    display: none;
   }
 }

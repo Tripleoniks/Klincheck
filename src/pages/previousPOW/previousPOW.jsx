@@ -37,6 +37,12 @@ const PreviousPlace = () => {
       <Logo />
       <div className="row previous-row">
         <div className="left col-md-6">
+        <div className="back-btn">
+          <button onClick={() => history.goBack()}>
+            {/* <i className="fa-solid fa-arrow-left-long"></i> */}
+            back
+          </button>
+          </div>
           <h3>Previous place of work</h3>
           <form onSubmit={handleSubmit}>
           <div className="form-group">

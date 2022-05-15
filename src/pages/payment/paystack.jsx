@@ -14,6 +14,17 @@ const Payment = ({ userEmail, requestType, amount }) => {
     publicKey: "pk_test_59e6e667d3990cda6c6a6849eb0c8c303cc333fd",
   };
 
+  const onSuccess = async (reference) => {
+    await postPayementReference(reference)
+    history.push("/");
+  };
+
+  const onClose = () => {
+    toast.error("transaction not completed", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
+
   const postPayementReference = async  (reference) => {
     const paymentReference ={
         customer_id: userEmail,
@@ -35,17 +46,7 @@ const Payment = ({ userEmail, requestType, amount }) => {
 
 
 
-  const onSuccess = async (reference) => {
-    console.log("transaction successful", reference);
-    await postPayementReference(reference)
-    history.push("/");
-  };
 
-  const onClose = () => {
-    toast.error("transaction not completed", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-  };
 
 
   const componentProps = {
