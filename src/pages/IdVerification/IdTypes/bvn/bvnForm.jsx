@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import "../../../../scss/form.scss";
 import { toast } from "react-toastify";
 import ButtonLoader from "../../../../component/buttonLoader/buttonLoader";
+import { handleSubmitEmail } from "../../../../services/usePost";
 
 /* Setting Parameter for request */
 
@@ -13,11 +14,13 @@ const config = {
   },
 };
 
+
 /* Getting input values from input fields & setting useState   */
 const BvnForm = () => {
   const [bvnValue, setBvnValue] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
   const [errMsg, setErrMsg] = useState(false);
   const history = useHistory();
@@ -39,6 +42,10 @@ const BvnForm = () => {
       },
     },
   };
+  const userEmailData ={
+    "email": email,
+    "id_type": "BVN",
+  }
 
   /* -----------calling the Api------------------ */
   const verify = async (e) => {
@@ -47,8 +54,10 @@ const BvnForm = () => {
       setErrMsg(false);
       setLoading(true);
       try {
+        await handleSubmitEmail(userEmailData);
         const { data } = await axios.post("/bvn", userData, config);
         console.log(data);
+        console.log(process.env.REACT_APP_TOKEN);
         setLoading(false);
         if (
           data.statusCode === 200 &&
@@ -115,6 +124,14 @@ const BvnForm = () => {
     <div>
       <form onSubmit={verify}>
         <div className="container-fluid form_area">
+        <div className="col-md-12 col-12 text-center ">
+              <input
+                type="email"
+                className="input_area"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your Email"
+              />{" "}
+            </div>
           <div className="row">
             <div className="col-md-6 co-12 text-center">
               <input

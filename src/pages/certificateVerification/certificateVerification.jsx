@@ -72,7 +72,6 @@ const CertificateVerification = () => {
       setLoading(false);
     }
   };
-
   useEffect(() => {
     getPrice();
   }, []);

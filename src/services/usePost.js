@@ -21,3 +21,20 @@ export const handleSumbitForm = async ( url, userData) => {
 
 };
 
+export  const handleSubmitEmail = async (userEmailData) => {
+  if(!userEmailData) return;
+    try {
+      const data  = await axios.post(
+        "http://aledoyhost.com/klinsheet_api/api_klin_id/items/create.php",
+        userEmailData, 
+      );
+      if (data.status === 201) {
+        toast.success("Request Successful");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Request Failed");
+
+    }
+
+}

@@ -4,6 +4,7 @@ import ButtonLoader from "../../../../component/buttonLoader/buttonLoader";
 import { useHistory } from "react-router";
 import "../../../../scss/form.scss";
 import { toast } from "react-toastify";
+import { handleSubmitEmail } from "../../../../services/usePost";
 
 /* Setting Parameter for request */
 const config = {
@@ -22,6 +23,7 @@ const NinForm = () => {
   const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const [email, setEmail] = useState("");
   const handleOnChange = () => {
     setIsChecked(!isChecked);
   };
@@ -38,6 +40,10 @@ const NinForm = () => {
       },
     },
   };
+  const userEmailData ={
+    "email": email,
+    "id_type": "NIN",
+  }
   /* -----------calling the Api------------------ */
   const verify = async (e) => {
     e.preventDefault();
@@ -45,6 +51,7 @@ const NinForm = () => {
       setErrMsg(false);
       setLoading(true);
       try {
+        await handleSubmitEmail(userEmailData);
         const { data } = await axios.post("/nin", userData, config);
         console.log(data);
         setLoading(false);
@@ -112,6 +119,16 @@ const NinForm = () => {
     <div>
       <form onSubmit={verify}>
         <div className="container-fluid form_area">
+        <div className="row">
+            <div className="col-md-12 col-12 text-center ">
+              <input
+                type="email"
+                className="input_area"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your Email"
+              />{" "}
+            </div>
+          </div>
           <div className="row form_row">
             <div className="col-md-6 co-12 text-center">
               <input

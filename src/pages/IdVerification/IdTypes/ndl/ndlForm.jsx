@@ -4,6 +4,7 @@ import ButtonLoader from "../../../../component/buttonLoader/buttonLoader";
 import { useHistory } from "react-router";
 import "../../../../scss/form.scss";
 import { toast } from "react-toastify";
+import { handleSubmitEmail } from "../../../../services/usePost";
 
 /* Setting Parameter for request */
 
@@ -18,6 +19,7 @@ const NdlForm = () => {
   const [ndlValue, setNdlValue] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
   const [errMsg, setErrMsg] = useState(false);
   const history = useHistory();
@@ -39,6 +41,10 @@ const NdlForm = () => {
       },
     },
   };
+  const userEmailData ={
+    "email": email,
+    "id_type": "NDL",
+  }
 
   /* -----------calling the Api------------------ */
   const verify = async (e) => {
@@ -47,6 +53,7 @@ const NdlForm = () => {
       setErrMsg(false);
       setLoading(true);
       try {
+        await handleSubmitEmail(userEmailData);
         const { data } = await axios.post("/drivers-license", userData, config);
         console.log(data);
         setLoading(false);
@@ -116,6 +123,14 @@ const NdlForm = () => {
     <div>
       <form onSubmit={verify}>
         <div className="container-fluid form_area">
+        <div className="col-md-12 col-12 text-center ">
+              <input
+                type="email"
+                className="input_area"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your Email"
+              />{" "}
+            </div>
           <div className="row">
             <div className="col-md-6 co-12 text-center">
               <input
