@@ -52,7 +52,7 @@ const CertificateVerification = () => {
       console.log(res);
       userData.image_path = res.data.secure_url;
       try {
-        const response = await handleSumbitForm(
+         await handleSumbitForm(
           "http://aledoyhost.com/klinsheet_api/api_academic_veri/items/create.php",
           userData
         );
@@ -92,7 +92,7 @@ const CertificateVerification = () => {
             <div className="form-group">
               <label>Your Email</label>
               <input
-                type="text"
+                type="email"
                 className="form-control"
                 onChange={(e) => setEmail(e.target.value)}
                 required

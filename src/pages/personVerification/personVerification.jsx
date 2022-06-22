@@ -39,7 +39,7 @@ const PersonVerification = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const response = handleSumbitForm(
+    await handleSumbitForm(
       "http://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/create.php",
       userData
     );

@@ -5,6 +5,7 @@ import "./addressForm.scss";
 import { useHistory } from "react-router-dom";
 import ButtonLoader from "../buttonLoader/buttonLoader";
 import { handleSumbitForm } from "../../services/usePost";
+import { toast } from "react-toastify";
 
 const AddressForm = () => {
   const [email, setEmail] = useState("");
@@ -52,7 +53,7 @@ const AddressForm = () => {
       );
       userData.image_path = response?.data?.secure_url;
       try{
-        const res = await handleSumbitForm(
+         await handleSumbitForm(
           "http://aledoyhost.com/klinsheet_api/api_address_veri/items/create.php",
           userData
         );
@@ -60,12 +61,12 @@ const AddressForm = () => {
         history.push("/");
       }
     catch(err){
-      console.log(err);
       history.push("/");
       setLoading(false);
     }
     } catch(error){
-      console.log(error);
+      setLoading(false);
+      toast.error("Something went wrong");
     }
     setLoading(false);
   }
