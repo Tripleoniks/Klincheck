@@ -10,8 +10,6 @@
     border: 1px solid transparent;
     padding: .5rem;
     &:hover{
-        background-color: $secondary-color;
-        color: $primary-color;
         border: 1px solid $primary-color;
         transition: ease-in-out .6s;
     }

@@ -21,6 +21,7 @@ const CriminalRecord = () => {
     name: name,
     address: address,
     Phone: phoneNo,
+    payment_status: "pending",
   };
 
   const history = useHistory();

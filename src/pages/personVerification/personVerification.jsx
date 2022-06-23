@@ -22,6 +22,7 @@ const PersonVerification = () => {
     "employee_name": employeeName,
     "guarantor_name": name,
     "occupation": occupation,
+    "payment_status": "pending",
   };
   
 

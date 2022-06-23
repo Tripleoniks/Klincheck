@@ -16,6 +16,7 @@ const CertificateVerification = () => {
   const userData = {
     customer_id: email,
     image_path: certificate,
+    payment_status: "pending",
   };
   const getPrice = async () => {
     const price = await axios.get(
@@ -25,17 +26,6 @@ const CertificateVerification = () => {
   };
   const { academic_price } = price;
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   handleSumbitForm(
-  //     "http://aledoyhost.com/klinsheet_api/api_academic_veri/items/create.php",
-  //     userData
-  //   );
-  //   setLoading(false);
-  //   e.target.reset();
-  //   history.push("/choose-payment", {email: userData.customer_id, amount:academic_price ,requestType: "Academic Verification"});
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();

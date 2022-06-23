@@ -38,7 +38,6 @@ const Payment = ({ userEmail, requestType, amount }) => {
   // update user data after successful payment
   const updateUserData = async () => {
     const  userId = await localStorage.getItem("user");
-    console.log(userId);
     const update = {
       "unique_id": userId,
       "payment_method": "paystack",
@@ -87,7 +86,6 @@ const Payment = ({ userEmail, requestType, amount }) => {
     await updateUserData();
     toast.success("Payment Successfully Received");
     history.push("/");
-    console.log(requestType);
     localStorage.removeItem("user");
   };
 

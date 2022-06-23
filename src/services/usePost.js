@@ -12,7 +12,6 @@ export const handleSumbitForm = async ( url, userData) => {
       );
       if (data.status === 201) {
         toast.success("Request Successful");
-        console.log(data.data[0]);
         localStorage.setItem("user", (data.data[0]));
       }
     } catch (error) {
