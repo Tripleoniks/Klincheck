@@ -1,0 +1,2 @@
+/api/* https://api.youverify.co/v2/api/identity/ng/:splat 200
+/* /index.html 200  
