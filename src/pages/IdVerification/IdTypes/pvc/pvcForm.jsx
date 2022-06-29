@@ -52,7 +52,7 @@ const PvcForm = () => {
       setLoading(true);
       try {
         await handleSubmitEmail(userEmailData);
-        const { data } = await axios.post("/pvc", userData, config);
+        const { data } = await axios.post("/api/pvc", userData, config);
         setLoading(false);
         if (
           data.statusCode === 200 &&

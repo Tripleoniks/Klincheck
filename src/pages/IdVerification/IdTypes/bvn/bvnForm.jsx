@@ -55,7 +55,7 @@ const BvnForm = () => {
       setLoading(true);
       try {
         await handleSubmitEmail(userEmailData);
-        const { data } = await axios.post("/bvn", userData, config);
+        const { data } = await axios.post("/api/bvn", userData, config);
         setLoading(false);
         if (
           data.statusCode === 200 &&

@@ -50,7 +50,7 @@ const NinForm = () => {
       setLoading(true);
       try {
         await handleSubmitEmail(userEmailData);
-        const { data } = await axios.post('/nin', userData, config);
+        const { data } = await axios.post('/api/nin', userData, config);
         setLoading(false);
         if (
           data.statusCode === 200 &&

@@ -54,7 +54,7 @@ const NdlForm = () => {
       setLoading(true);
       try {
         await handleSubmitEmail(userEmailData);
-        const { data } = await axios.post("/drivers-license", userData, config);
+        const { data } = await axios.post("/api/drivers-license", userData, config);
         setLoading(false);
         if (
           data.statusCode === 200 &&

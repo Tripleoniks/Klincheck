@@ -52,7 +52,7 @@ const NipForm = () => {
       setLoading(true);
       try {
         await handleSubmitEmail(userEmailData);
-        const { data } = await axios.post("/passport", userData, config);
+        const { data } = await axios.post("/api/passport", userData, config);
         setLoading(false);
         if (
           data.statusCode === 200 &&
