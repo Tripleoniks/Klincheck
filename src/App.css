@@ -24,7 +24,7 @@ label:focus,
   border: none;
   color: #1c6641;
   cursor: pointer;
-  margin: 3rem 0 1rem 0;
+  margin: 5rem 0 1rem 0;
 }
 
 .back-btn button:hover {
