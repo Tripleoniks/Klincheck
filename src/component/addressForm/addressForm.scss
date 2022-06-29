@@ -1,6 +1,107 @@
-
-.form-group input:active, .form-group  input:focus {
+@import "../../scss/default";
+@import "../../scss/./color";
+.form-group-add input:active, .form-group-add  input:focus {
   outline:0px !important;
      -webkit-appearance:none;
      box-shadow: none !important; 
 }
+
+#add-home{
+    padding-left: 91px;
+    padding: 0 auto;
+  
+    .address-row{
+        align-items: center;
+    
+        .right{
+            background-image: url(../../images/map.png);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    }
+}
+.left{
+  h3{
+      color: $primary-color;
+      font-weight: 600;
+  }
+  .add-row-add{
+    display: flex !important;
+    justify-content: space-between;
+    padding: 0!important;
+    margin: 0;
+    width: 80%  
+  }
+}
+
+
+.form-group{
+    width: 80%;
+    padding:5px 0 !important;
+    // border:2px solid;
+    box-shadow: 0px 3px 6px 3px #00000029;
+    margin:27px 0;
+    position: relative;
+    border-radius: 5px;
+  }
+  .form-group>label{
+    position:absolute;
+    top:-10px;
+    left:20px;
+    background-color:white;
+    color: #2E2E2E;
+    font-size: 12px;
+  }
+  
+  .form-group>input{
+    border:none;
+   
+    outline: none !important;                
+  }
+
+.form-group-add{
+  width: 80%;
+    padding: 5px 0 !important;
+    // border:2px solid;
+    box-shadow: 0px 3px 6px 3px #00000029;
+    margin: 1.5rem 0;
+    position: relative;
+    border-radius: 5px;
+}
+.form-group-add>label{
+  position:absolute;
+  top:-10px;
+  left:20px;
+  background-color:white;
+  color: #2E2E2E;
+  font-size: 12px;
+}
+.form-group-add>input{
+  border:none;
+  width: 100%;
+  padding: .5rem;
+  outline: none !important;                
+}
+
+  @media (max-width: 768px) {
+    #add-home{
+        padding: 1rem;
+    }
+    .right{
+        display: none;
+    }
+    .form-group{
+        margin: 40px 0;
+        width: 100%;
+    }
+    .add-row{
+        width: 100% !important;
+    }
+    .form-group-add{
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+
+  }

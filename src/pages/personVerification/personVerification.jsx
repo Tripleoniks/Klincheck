@@ -28,7 +28,7 @@ const PersonVerification = () => {
 
   const getPrice = async () => {
     const price = await axios.get(
-      "http://aledoyhost.com/klinsheet_api/api_price/items/read.php"
+      "https://aledoyhost.com/klinsheet_api/api_price/items/read.php"
     );
     setPrice(price?.data?.items[0]);
   };
@@ -41,7 +41,7 @@ const PersonVerification = () => {
     e.preventDefault();
     setLoading(true);
     await handleSumbitForm(
-      "http://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/create.php",
+      "https://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/create.php",
       userData
     );
     setLoading(false);

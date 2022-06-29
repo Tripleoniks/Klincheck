@@ -1,74 +1,41 @@
-@import "../../scss/default";
-@import "../../scss/./color";
-#add-home{
-    padding-left: 91px;
-    padding: 0 auto;
-  
-    .address-row{
-        align-items: center;
+
+.form-group input:active, .form-group  input:focus {
+    outline:0px !important;
+       -webkit-appearance:none;
+       box-shadow: none !important; 
+  }
+  @import "../../scss/default";
+  @import "../../scss/./color";
+  #add-home{
+      padding-left: 91px;
+      padding: 0 auto;
     
-        .left{
-            h3{
-                color: $primary-color;
-                font-weight: 600;
-            }
-              .add-row{
-                  justify-content: space-between;
-                  padding: 0!important;
-                  margin: 0;
-                  width: 80%;
-
+      .address-row{
+          align-items: center;
+      
+          .left{
+              h3{
+                  color: $primary-color;
+                  font-weight: 600;
               }
-        }
-        .right{
-            background-image: url(../../images/map.png);
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-        }
-    }
-}
-
-.form-group{
-    width: 80%;
-    padding:5px 0 !important;
-    // border:2px solid;
-    box-shadow: 0px 3px 6px 3px #00000029;
-    margin:27px 0;
-    position: relative;
-    border-radius: 5px;
-  }
-  .form-group>label{
-    position:absolute;
-    top:-10px;
-    left:20px;
-    background-color:white;
-    color: #2E2E2E;
-    font-size: 12px;
+          }
+          .right{
+              background-image: url(../../images/map.png);
+              background-position: top;
+              background-repeat: no-repeat;
+              background-size: cover;
+              height: 100vh;
+          }
+      }
   }
   
-  .form-group>input{
-    border:none;
-    outline: none !important;                
-  }
-
-  @media (max-width: 768px) {
-    #add-home{
-        padding: 1rem;
+  
+    @media (max-width: 768px) {
+      #add-home{
+          padding: 1rem;
+      }
+      .right{
+          display: none;
+      }
     }
-    .address-row{
-        margin-top: 3rem !important;
-    }
-    .right{
-        display: none;
-    }
-    .form-group{
-        margin: 40px 0;
-        width: 100%;
-    }
-    .add-row{
-        width: 100% !important;
-    }
-
-  }
+  

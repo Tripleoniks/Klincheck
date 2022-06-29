@@ -5,7 +5,6 @@ import { useHistory } from "react-router";
 import "../../../../scss/form.scss";
 import { toast } from "react-toastify";
 import { handleSubmitEmail } from "../../../../services/usePost";
-
 /* Setting Parameter for request */
 const config = {
   headers: {
@@ -13,7 +12,6 @@ const config = {
   },
 };
 
-/* Getting input values from input fields & setting useState   */
 const NinForm = () => {
   const [ninValue, setNinValue] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -52,8 +50,7 @@ const NinForm = () => {
       setLoading(true);
       try {
         await handleSubmitEmail(userEmailData);
-        const { data } = await axios.post("/nin", userData, config);
-        console.log(data);
+        const { data } = await axios.post('/nin', userData, config);
         setLoading(false);
         if (
           data.statusCode === 200 &&
@@ -64,8 +61,6 @@ const NinForm = () => {
             idNumber: ninValue,
             pageType: "NinForm",
           });
-          console.log(data);
-          console.log(data.data);
         } else if (
           data.statusCode === 200 &&
           data?.data?.validations?.validationMessages.length > 0
@@ -73,10 +68,8 @@ const NinForm = () => {
           history.push("/invalid", {
             errorMessage: data?.data?.validations.validationMessages,
           });
-          console.log(data.data.validationMessages);
         }
       } catch (error) {
-        console.log(error);
         setLoading(false);
         toast.error(error?.response?.data?.message);
       }

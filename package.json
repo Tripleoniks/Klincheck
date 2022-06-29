@@ -1,5 +1,6 @@
 {
   "name": "klinsheet",
+  "homepage": "https://identity.klincheck.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,5 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy" : "https://api.youverify.co/v2/api/identity/ng"
+  "proxy" :"https://api.youverify.co/v2/api/identity/ng"
 }

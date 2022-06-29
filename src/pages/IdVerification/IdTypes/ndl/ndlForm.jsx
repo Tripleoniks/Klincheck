@@ -55,7 +55,6 @@ const NdlForm = () => {
       try {
         await handleSubmitEmail(userEmailData);
         const { data } = await axios.post("/drivers-license", userData, config);
-        console.log(data);
         setLoading(false);
         if (
           data.statusCode === 200 &&
@@ -66,8 +65,6 @@ const NdlForm = () => {
             idNumber: ndlValue,
             pageType: "NdlForm",
           });
-          console.log(data);
-          console.log(data.data);
         } else if (
           data.statusCode === 200 &&
           data?.data?.validations?.validationMessages.length > 0
@@ -75,10 +72,8 @@ const NdlForm = () => {
           history.push("/invalid", {
             errorMessage: data?.data?.validations.validationMessages,
           });
-          console.log(data.data.validationMessages);
         }
       } catch (error) {
-        console.log(error);
         setLoading(false);
         toast.error(error?.response?.data?.message);
       }

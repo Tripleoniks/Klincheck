@@ -20,7 +20,7 @@ const CertificateVerification = () => {
   };
   const getPrice = async () => {
     const price = await axios.get(
-      "http://aledoyhost.com/klinsheet_api/api_price/items/read.php"
+      "https://aledoyhost.com/klinsheet_api/api_price/items/read.php"
     );
     setPrice(price?.data?.items[0]);
   };
@@ -39,7 +39,6 @@ const CertificateVerification = () => {
         "https://api.cloudinary.com/v1_1/klinsheet/image/upload",
         datay
       );
-      console.log(res);
       userData.image_path = res.data.secure_url;
       try {
          await handleSumbitForm(
@@ -53,12 +52,10 @@ const CertificateVerification = () => {
           requestType: "Academic Verification",
         });
       } catch (err) {
-        console.log(err);
         setLoading(false);
         history.push("/");
       }
     } catch (error) {
-      console.log(error);
       setLoading(false);
     }
   };

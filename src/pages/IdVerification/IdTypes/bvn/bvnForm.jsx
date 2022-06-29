@@ -56,8 +56,6 @@ const BvnForm = () => {
       try {
         await handleSubmitEmail(userEmailData);
         const { data } = await axios.post("/bvn", userData, config);
-        console.log(data);
-        console.log(process.env.REACT_APP_TOKEN);
         setLoading(false);
         if (
           data.statusCode === 200 &&
@@ -68,8 +66,6 @@ const BvnForm = () => {
             idNumber: bvnValue,
             pageType: "BvnForm",
           });
-          console.log(data);
-          console.log(data.data);
         } else if (
           data.statusCode === 200 &&
           data?.data?.validations?.validationMessages.length > 0
@@ -77,10 +73,8 @@ const BvnForm = () => {
           history.push("/invalid", {
             errorMessage: data?.data?.validations.validationMessages,
           });
-          console.log(data.data.validationMessages);
         }
       } catch (error) {
-        console.log(error);
         setLoading(false);
         toast.error(error?.response?.data?.message);
       }

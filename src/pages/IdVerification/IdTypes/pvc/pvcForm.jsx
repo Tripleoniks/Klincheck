@@ -53,7 +53,6 @@ const PvcForm = () => {
       try {
         await handleSubmitEmail(userEmailData);
         const { data } = await axios.post("/pvc", userData, config);
-        console.log(data);
         setLoading(false);
         if (
           data.statusCode === 200 &&
@@ -64,8 +63,6 @@ const PvcForm = () => {
             idNumber: pvcValue,
             pageType: "PvcForm",
           });
-          console.log(data);
-          console.log(data.data);
         } else if (
           data.statusCode === 200 &&
           data?.data?.validations?.validationMessages.length > 0
@@ -73,10 +70,8 @@ const PvcForm = () => {
           history.push("/invalid", {
             errorMessage: data?.data?.validations.validationMessages,
           });
-          console.log(data.data.validationMessages);
         }
       } catch (error) {
-        console.log(error);
         setLoading(false);
         toast.error(error?.response?.data?.message);
       }

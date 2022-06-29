@@ -28,11 +28,10 @@ const Payment = ({ userEmail, requestType, amount }) => {
     };
     try {
       await axios.post(
-        "http://aledoyhost.com/klinsheet_api/api_payments/items/create.php",
+        "https://aledoyhost.com/klinsheet_api/api_payments/items/create.php",
         paymentReference
       );
     } catch (error) {
-      console.log(error);
     }
   };
   // update user data after successful payment
@@ -47,7 +46,7 @@ const Payment = ({ userEmail, requestType, amount }) => {
     if (requestType === "guarantor") {
       await axios
         .patch(
-          "http://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/update_data.php",
+          "https://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/update_data.php",
           update
         )
         .then((res) => {
@@ -55,7 +54,7 @@ const Payment = ({ userEmail, requestType, amount }) => {
     } else if (requestType === "reference") {
       await axios
         .patch(
-          "http://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/update_data.php",
+          "https://aledoyhost.com/klinsheet_api/api_guarantor_ref/items/update_data.php",
           update
         )
         .then((res) => {
@@ -63,7 +62,7 @@ const Payment = ({ userEmail, requestType, amount }) => {
     } else if (requestType === "Academic Verification") {
       await axios
         .patch(
-          "http://aledoyhost.com/klinsheet_api/api_academic_veri/items/update_data.php",
+          "https://aledoyhost.com/klinsheet_api/api_academic_veri/items/update_data.php",
           update
         )
         .then((res) => {
@@ -71,7 +70,7 @@ const Payment = ({ userEmail, requestType, amount }) => {
     } else if (requestType === "criminalRecord") {
       await axios
         .patch(
-          "http://aledoyhost.com/klinsheet_api/api_criminal_record/items/update_data.php",
+          "https://aledoyhost.com/klinsheet_api/api_criminal_record/items/update_data.php",
           update
         )
         .then((res) => {

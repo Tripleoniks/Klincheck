@@ -27,17 +27,7 @@ const AddressForm = () => {
     bus_stop: landmark,
     image_path: passport,
   };
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //     const response = await handleSumbitForm(
-  //       "http://aledoyhost.com/klinsheet_api/api_address_veri/items/create.php",
-  //       userData
-  //     );
-  //     console.log(response);
-  //     setLoading(false);
-  //     history.push("/");
-  // };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,7 +44,7 @@ const AddressForm = () => {
       userData.image_path = response?.data?.secure_url;
       try{
          await handleSumbitForm(
-          "http://aledoyhost.com/klinsheet_api/api_address_veri/items/create.php",
+          "https://aledoyhost.com/klinsheet_api/api_address_veri/items/create.php",
           userData
         );
         setLoading(false);
@@ -74,7 +64,7 @@ const AddressForm = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="form-group-add">
           <label>Your Email</label>
           <input
             type="email"
@@ -83,7 +73,7 @@ const AddressForm = () => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-add">
           <label>Employee's Name</label>
           <input
             type="text"
@@ -92,7 +82,7 @@ const AddressForm = () => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="form-group-add">
           <label>Employee's Address</label>
           <input
             type="text"
@@ -101,8 +91,7 @@ const AddressForm = () => {
             required
           />
         </div>
-        <div className="row add-row">
-          <div className="form-group col-md-5">
+          <div className="form-group-add ">
             <label>City</label>
             <input
               type="text"
@@ -111,7 +100,7 @@ const AddressForm = () => {
               required
             />
           </div>
-          <div className="form-group col-md-5">
+          <div className="form-group-add ">
             <label>State</label>
             <input
               type="text"
@@ -120,9 +109,8 @@ const AddressForm = () => {
               required
             />
           </div>
-        </div>
-        <div className="row add-row">
-          <div className="form-group col-md-5">
+    
+          <div className="form-group-add">
             <label>Nearest Bus Stop/Landmark</label>
             <input
               type="text"
@@ -131,7 +119,7 @@ const AddressForm = () => {
               required
             />
           </div>
-          <div className="form-group col-md-5">
+          <div className="form-group-add">
             <label>Upload Passport Photograph</label>
             <input
               type="file"
@@ -142,7 +130,6 @@ const AddressForm = () => {
               required
             />
           </div>
-        </div>
         <CustomButton>
           {loading ? "Please Wait" : "Next"}
           {loading && <ButtonLoader />}
